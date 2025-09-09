@@ -7,13 +7,24 @@
     <link rel="stylesheet" href="css/style-cabanas.css" />
 </head>
 <body>
+
+    <!-- 🔹 HEADER con logo centrado -->
+  <header class="page-header">
+    <img src="img/logo-seilan.jpeg" alt="Logo Reservalia" class="logo">
+  </header>
+
+<div class="guest-header">
+    <span class="back-arrow">❮</span>
+    <h2>Cabañas disponibles</h2>
+</div>
+
     <!-- Card de cabaña -->
 <div class="cabin-card">
   <h2 class="cabin-title">Malaquita Suite</h2>
   
   <img src="img/malauita-suite-card.jpeg" alt="Malaquita Suite" class="cabin-img" />
 
-<div class="cabin-icons" id="cabin-icons"></div>
+<div class="cabin-icons" data-icons='["mdi:car","mdi:wifi","mdi:dog","mdi:television","mdi:hot-tub","mdi:parking"]'></div>
 
   <p class="cabin-desc">
     En la Cabaña Malaquita Suite disfrutarás de un alojamiento privado, romántico y elegante.
@@ -24,27 +35,36 @@
   <button class="reserve-btn">Reservar</button>
 </div>
 
+<div class="cabin-card">
+  <h2 class="cabin-title">Cabaña Aguamarina</h2>
+  
+  <img src="img/aguamarina-card.jpeg" alt="Cabaña Aguamarina" class="cabin-img" />
+
+<div class="cabin-icons" data-icons='["mdi:car","mdi:wifi","mdi:dog","mdi:television","mdi:parking"]'></div>
+
+  <p class="cabin-desc">
+    En la Cabaña Aguamarina de Seilan Alojamiento Rural es única, hermosa y romántica. 
+    Puedes disfrutar de una noche tranquila es un espacio lejos de los ruidos de la ciudad. 
+    Descansaras y despertaras recargado de buena energía. La cabaña está ubicada para que disfrutes tu 
+    estadía en privado. Enamórate de los detalles que la rodean y que la hacen única por dentro y por fuera. </p>
+
+  <button class="reserve-btn">Reservar</button>
+</div>
+
 <script>
-  const icons = [
-    { name: "mdi:car", alt: "Carro" },
-    { name: "mdi:wifi", alt: "Wifi" },
-    { name: "mdi:dog", alt: "Mascotas" },
-    { name: "mdi:television", alt: "Televisión" },
-    { name: "mdi:hot-tub", alt: "Jacuzzi" },
-    { name: "mdi:parking", alt: "Parqueadero" },
-  ];
-
-  const container = document.getElementById("cabin-icons");
-
-  icons.forEach(icon => {
-    const img = document.createElement("img");
-    img.src = `https://api.iconify.design/${icon.name}.svg`;
-    img.alt = icon.alt;
-    img.width = 16;  // puedes ajustarlo al tamaño que quieres
-    img.height = 16;
-    container.appendChild(img);
+  document.querySelectorAll(".cabin-icons").forEach(container => {
+    const icons = JSON.parse(container.dataset.icons); // lee el atributo data-icons
+    icons.forEach(name => {
+      const img = document.createElement("img");
+      img.src = `https://api.iconify.design/${name}.svg`;
+      img.alt = name;
+      img.width = 16;
+      img.height = 16;
+      container.appendChild(img);
+    });
   });
 </script>
+
 
 
 </body>

@@ -39,6 +39,16 @@ body {
   padding: 24px;
 }
 
+.guest-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 320px;       /* mismo ancho que la tarjeta */
+  max-width: 90%;
+  margin: 0 auto 10px auto;  /* centrado arriba de la card */
+}
+
 .guest-card {
   background: white;
   padding: 20px;
@@ -59,14 +69,14 @@ body {
   margin-bottom: 20px;
 }
 
-.back-arrow {
+.guest-header .back-arrow {
   position: absolute;
   left: 0;
   cursor: pointer;
   font-size: 20px;
 }
 
-.header h2 {
+.guest-header h2 {
   margin: 0;
   font-size: 18px;
   font-weight: 600;

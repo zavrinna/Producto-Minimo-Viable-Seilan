@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calendario Reservas</title>
+  <link rel="stylesheet" href="css/style-calendario.css" />
+</head>
+<body>
+
+  <!-- 🔹 HEADER con logo centrado -->
+  <header class="page-header">
+    <img src="img/logo.png" alt="Logo Reservalia" class="logo">
+  </header>
+
+  <!-- 🔹 CONTENEDOR DEL CALENDARIO -->
+  <main class="main-content">
+    <div class="calendar-container">
+      <div class="calendar-header">
+        <button id="prev">&lt;</button>
+        <h2 id="monthYear">Agosto</h2>
+        <button id="next">&gt;</button>
+      </div>
+
+      <div class="calendar-days">
+        <div>Do</div><div>Lu</div><div>Ma</div><div>Mi</div><div>Ju</div><div>Vi</div><div>Sa</div>
+      </div>
+
+      <div class="calendar-dates" id="dates"></div>
+
+      <div class="input-group">
+        <label for="checkin">Check-In:</label>
+        <input type="text" id="checkin" placeholder="-/-/-" readonly>
+      </div>
+
+      <div class="input-group">
+        <label for="checkout">Check-Out:</label>
+        <input type="text" id="checkout" placeholder="-/-/-" readonly>
+      </div>
+
+      <button class="done-button" id="doneBtn" disabled>Hecho</button>
+    </div>
+  </main>
+
+  <script src="js/script-calendario.js"></script>
+</body>
+</html>

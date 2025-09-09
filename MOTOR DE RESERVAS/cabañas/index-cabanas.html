@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style-cabanas.css" />
+</head>
+<body>
+    <!-- Card de cabaña -->
+<div class="cabin-card">
+  <h2 class="cabin-title">Malaquita Suite</h2>
+  
+  <img src="img/malauita-suite-card.jpeg" alt="Malaquita Suite" class="cabin-img" />
+
+<div class="cabin-icons" id="cabin-icons"></div>
+
+  <p class="cabin-desc">
+    En la Cabaña Malaquita Suite disfrutarás de un alojamiento privado, romántico y elegante.
+    Despertarás con una vista increíble a las montañas de Paipa.  
+    Rodeada de detalles hermosos, podrás disfrutar de un baño relajante en el jacuzzi o una copa de vino observando la naturaleza.
+  </p>
+
+  <button class="reserve-btn">Reservar</button>
+</div>
+
+<script>
+  const icons = [
+    { name: "mdi:car", alt: "Carro" },
+    { name: "mdi:wifi", alt: "Wifi" },
+    { name: "mdi:dog", alt: "Mascotas" },
+    { name: "mdi:television", alt: "Televisión" },
+    { name: "mdi:hot-tub", alt: "Jacuzzi" },
+    { name: "mdi:parking", alt: "Parqueadero" },
+  ];
+
+  const container = document.getElementById("cabin-icons");
+
+  icons.forEach(icon => {
+    const img = document.createElement("img");
+    img.src = `https://api.iconify.design/${icon.name}.svg`;
+    img.alt = icon.alt;
+    img.width = 16;  // puedes ajustarlo al tamaño que quieres
+    img.height = 16;
+    container.appendChild(img);
+  });
+</script>
+
+
+</body>
+</html>
+

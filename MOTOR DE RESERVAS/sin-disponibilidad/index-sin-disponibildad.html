@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style-cabanas.css" />
+    <link rel="stylesheet" href="css/style-sin-disponibilidad.css" />
 </head>
 <body>
 
@@ -15,57 +15,12 @@
 
 <div class="guest-header">
     <span class="back-arrow">❮</span>
-    <h2>Cabañas disponibles</h2>
 </div>
 
-    <!-- Card de cabaña -->
-<div class="cabin-card">
-  <h2 class="cabin-title">Malaquita Suite</h2>
-  
-  <img src="img/malauita-suite-card.jpeg" alt="Malaquita Suite" class="cabin-img" />
-
-<div class="cabin-icons" data-icons='["mdi:car","mdi:wifi","mdi:dog","mdi:television","mdi:hot-tub","mdi:parking"]'></div>
-
-  <p class="cabin-desc">
-    En la Cabaña Malaquita Suite disfrutarás de un alojamiento privado, romántico y elegante.
-    Despertarás con una vista increíble a las montañas de Paipa.  
-    Rodeada de detalles hermosos, podrás disfrutar de un baño relajante en el jacuzzi o una copa de vino observando la naturaleza.
-  </p>
-
-  <button class="reserve-btn">Reservar</button>
+<div class="sin-resultados">
+  <img src="img/calendario.svg" alt="Sin disponibilidad" class="icono-sin-resultados" />
+  <p class="texto-empty-state"> Disculpe, no hay disponibilidad para las fechas consultadas. </p>
 </div>
-
-<div class="cabin-card">
-  <h2 class="cabin-title">Cabaña Aguamarina</h2>
-  
-  <img src="img/aguamarina-card.jpeg" alt="Cabaña Aguamarina" class="cabin-img" />
-
-<div class="cabin-icons" data-icons='["mdi:car","mdi:wifi","mdi:dog","mdi:television","mdi:parking"]'></div>
-
-  <p class="cabin-desc">
-    En la Cabaña Aguamarina de Seilan Alojamiento Rural es única, hermosa y romántica. 
-    Puedes disfrutar de una noche tranquila es un espacio lejos de los ruidos de la ciudad. 
-    Descansaras y despertaras recargado de buena energía. La cabaña está ubicada para que disfrutes tu 
-    estadía en privado. Enamórate de los detalles que la rodean y que la hacen única por dentro y por fuera. </p>
-
-  <button class="reserve-btn">Reservar</button>
-</div>
-
-<script>
-  document.querySelectorAll(".cabin-icons").forEach(container => {
-    const icons = JSON.parse(container.dataset.icons); // lee el atributo data-icons
-    icons.forEach(name => {
-      const img = document.createElement("img");
-      img.src = `https://api.iconify.design/${name}.svg`;
-      img.alt = name;
-      img.width = 16;
-      img.height = 16;
-      container.appendChild(img);
-    });
-  });
-</script>
-
-
 
 </body>
 </html>

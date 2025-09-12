@@ -71,6 +71,80 @@ body {
     height: 50px;
 }
 
+/* Ocultar menú desktop en mobile */
+.nav-menu {
+  display: none;
+}
+
+/* Estilos para el menú desktop */
+.nav-menu ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: var(--secundary-color);
+}
+
+.btn-reserva {
+  background: var(--secundary-color);
+  color: var(--text-light);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+  text-decoration: none;
+}
+
+.btn-reserva:hover {
+  background: #AB4523;
+  transform: translateY(-2px);
+}
+
+/* --- Mobile Menu lateral --- */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  height: 100%;
+  background: var(--text-light);
+  box-shadow: -2px 0 10px rgba(0,0,0,0.15);
+  transition: right 0.3s ease;
+  padding: 60px 20px;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-menu li {
+  margin: 20px 0;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
 .language-selector {
     display: flex;
     gap: 10px;
@@ -323,6 +397,13 @@ body {
     transform: translateY(-2px);
 }
 
+.slogan {
+    font-family: 'Cream Candy';
+    font-size: 48px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
 /* Experiences */
 .experiences {
     background: var(--primary-color);
@@ -412,9 +493,12 @@ body {
 }
 
 .location h2 {
-    font-size: 24px;
+    font-family: 'Cream Candy';
+    font-size: 48px;
+    font-weight: 500;
+    margin-top: 45px;
     margin-bottom: 30px;
-    color: var(--text-dark);
+    color: var(--primary-color)
 }
 
 .map-container {
@@ -619,13 +703,36 @@ body {
 }
 /* ---------- Desktop: grid 2x2, sin scroll ---------- */
 @media (min-width: 768px) {
-  .experience-gallery {
+  .menu-toggle,
+  .mobile-menu {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .header .container {
+    justify-content: space-between;
+  }
+
+  .language-selector {
+    margin-left: 20px;
+  }
+}
+    .experience-gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 26px;
     padding: 0;
     margin: 30px 0;             /* elimina el overscroll negativo del mobile */
     overflow: visible;          /* desactiva scroll */
+  }
+
+  .slogan {
+    font-size: 80px;
   }
 
   .experience-gallery > div,
@@ -662,8 +769,41 @@ body {
   background: rgba(0, 0, 0, 0.293);    /* ahora sí cubre toda la imagen */
   border-radius: 8px;
   }
-}
+
 .experiences p {
     font-size: 20px;
 }
+
+.location h2 {
+    font-size: 80px;
+}
+
+.location-text {
+    font-size: 20px;
+}
+
+
+/* Fotter -->*/
+.contact-info p {
+    font-size: 20px;
+}
+
+.footer-logo img {
+    height: 120px;
+}
+
+.address p {
+    font-size: 20px;
+}
+
+.social-links p {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.footer-bottom p {
+    font-size: 20px;
+    opacity: 0.8;
+}
+
 }

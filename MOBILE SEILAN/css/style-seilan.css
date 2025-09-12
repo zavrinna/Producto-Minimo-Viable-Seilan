@@ -5,19 +5,18 @@
 }
 
 :root {
-    --primary-color: #8B4513;
+    --primary-color: #AB4523;
     --accent-color: #CD853F;
-    --text-dark: #2C1810;
+    --secundary-color: #71151E;
     --text-light: #FFFFFF;
     --bg-light: #F5F5DC;
     --red-accent: #B22222;
-    --gray-cream: #434550;
+    --grey-cream: #434550;
 }
 
 body {
     font-family: 'Open Sans', 'Cream Candy', sans-serif;
     line-height: 1.6;
-    color: var(--text-dark);
     overflow-x: hidden;
 }
 
@@ -220,7 +219,7 @@ body {
 }
 
 .cta-btn {
-    background: var(--red-accent);
+    background: var(--primary-color);
     color: var(--text-light);
     border: none;
     padding: 15px 30px;
@@ -249,7 +248,7 @@ body {
     font-size: 48px;
     margin-bottom: 40px;
     font-weight: 500;
-    color: var(--gray-cream);
+    color: var(--grey-cream);
 }
 
 .cabin-gallery {
@@ -265,7 +264,8 @@ body {
 
 .main-image img {
     width: 100%;
-    height: 250px;
+    height: auto;
+    display: block;
     object-fit: cover;
 }
 
@@ -319,11 +319,11 @@ body {
 .cabin-info p {
     font-size: 16px;
     margin-bottom: 25px;
-    color: var(--text-dark);
+    color: var(--grey-cream);
 }
 
 .details-btn {
-    background: var(--primary-color);
+    background: var(--secundary-color);
     color: var(--text-light);
     border: none;
     padding: 12px 25px;
@@ -335,13 +335,13 @@ body {
 }
 
 .details-btn:hover {
-    background: #7A3F0F;
+    background: #AB4523;
     transform: translateY(-2px);
 }
 
 /* Experiences */
 .experiences {
-    background: var(--red-accent);
+    background: var(--primary-color);
     color: var(--text-light);
     padding: 60px 0;
     text-align: center;
@@ -419,12 +419,12 @@ body {
     font-size: 14px;
     line-height: 1.6;
     color: #666;
-    text-align: justify;
+    text-align: center;
 }
 
 /* Footer */
 .footer {
-    background: var(--primary-color);
+    background: var(--secundary-color);
     color: var(--text-light);
     padding: 40px 0 20px;
     text-align: center;
@@ -435,8 +435,7 @@ body {
 }
 
 .footer-logo img {
-    height: 60px;
-    filter: brightness(0) invert(1);
+    height: 80px;
 }
 
 .contact-info {
@@ -488,7 +487,7 @@ body {
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.2);
+    border-top: 2px solid rgba(255, 255, 255, 0.999);
     padding-top: 20px;
 }
 

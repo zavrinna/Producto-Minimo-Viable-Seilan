@@ -12,9 +12,9 @@ menuToggle.addEventListener('click', () => {
 // Gallery Navigation
 let currentSlide = 0;
 const slides = [
-    '/placeholder.svg?height=250&width=350',
-    '/placeholder.svg?height=250&width=350',
-    '/placeholder.svg?height=250&width=350'
+    'img/seilan/810_0396.jpg',
+    'img/seilan/810_2201.jpg',
+    'img/seilan/810_2320-Pano-Editar.jpg'
 ];
 
 const mainImage = document.querySelector('.main-image img');

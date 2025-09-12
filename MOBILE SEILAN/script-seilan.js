@@ -10,42 +10,35 @@ menuToggle.addEventListener('click', () => {
 });
 
 // Gallery Navigation
-let currentSlide = 0;
-const slides = [
-    'img/seilan/810_0396.jpg',
-    'img/seilan/810_2201.jpg',
-    'img/seilan/810_2320-Pano-Editar.jpg'
-];
+document.querySelectorAll(".cabin-gallery").forEach(gallery => {
+  const images = gallery.querySelectorAll(".main-image img");
+  const dots = gallery.querySelectorAll(".dot");
+  let currentIndex = 0;
 
-const mainImage = document.querySelector('.main-image img');
-const dots = document.querySelectorAll('.dot');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
-
-function updateSlide(index) {
-    currentSlide = index;
-    mainImage.src = slides[currentSlide];
-    
+  // Función para mostrar imagen según índice
+  function showImage(index) {
+    images.forEach((img, i) => {
+      img.style.display = i === index ? "block" : "none";
+    });
     dots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === currentSlide);
+      dot.classList.toggle("active", i === index);
     });
-}
+    currentIndex = index;
+  }
 
-prevBtn.addEventListener('click', () => {
-    currentSlide = currentSlide > 0 ? currentSlide - 1 : slides.length - 1;
-    updateSlide(currentSlide);
-});
-
-nextBtn.addEventListener('click', () => {
-    currentSlide = currentSlide < slides.length - 1 ? currentSlide + 1 : 0;
-    updateSlide(currentSlide);
-});
-
-dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-        updateSlide(index);
+  // Event listeners en los dots
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      showImage(index);
     });
+  });
+
+  // Inicia mostrando la primera
+  showImage(0);
 });
+
+
+
 
 // Auto-slide functionality
 setInterval(() => {

@@ -37,9 +37,6 @@ document.querySelectorAll(".cabin-gallery").forEach(gallery => {
   showImage(0);
 });
 
-
-
-
 // Auto-slide functionality
 setInterval(() => {
     currentSlide = currentSlide < slides.length - 1 ? currentSlide + 1 : 0;
@@ -163,3 +160,4 @@ if (whatsappBtn) {
         }, 200);
     }, 3000);
 }
+

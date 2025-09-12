@@ -123,4 +123,8 @@ nextBtn.addEventListener("click", () => {
   renderCalendar(currentDate);
 });
 
+document.getElementById("done-button").addEventListener("click", function() {
+  window.location.href = "C:\Users\adria\OneDrive\Desktop\PMV\MOTOR DE RESERVAS\numero de huespedes\index-huespedes.html"; // aquí va la ruta de la página
+});
+
 renderCalendar(currentDate);

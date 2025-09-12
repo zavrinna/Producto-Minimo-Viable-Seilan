@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seilan - Alojamiento Rural en Paipa, Boyacá</title>
+    <link rel="stylesheet" href="css/style-seilan.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="logo">
+                <img src="/MOBILE SEILAN/img/LOGO SEILAN ALOJAMIENTO RURAL.png" alt="Seilan Logo">
+            </div>
+            
+            <div class="language-selector">
+                <img src="/placeholder.svg?height=24&width=36" alt="Español" class="flag active">
+                <img src="/placeholder.svg?height=24&width=36" alt="English" class="flag">
+            </div>
+        </div>
+    </header>
+    <!-- Main Hero -->
+    <section class="hero-main">
+        <div class="hero-bg">
+            <img src="img/fachada.jpg" alt="Seilan Cabañas">
+        </div>
+        <div class="hero-content">
+            <h2>Conecta con la serenidad de</h2>
+            <h1 class="script-font">Seilan Alojamiento Rural</h1>
+            <button class="cta-btn">¡Reserva ahora!</button>
+        </div>
+    </section>
+    <!-- Hero Section -->
+    <section class="hero-intro">
+        <div class="container">
+            <div class="plant-icon">
+                <img src="img/planta-01.svg" alt="Planta">
+            </div>
+            <p class="texto-uno">Explora nuestras cabañas de</p>
+            <p class="texto-dos">acomodación familiar</p>
+            <p class="texto-dos">y acomodación doble</p>
+            <p class="subtitle">Un lugar único en Paipa, Boyacá.<br>Con una vista impresionante.</p>
+        </div>
+
+        <!-- WhatsApp Button -->
+        <div class="whatsapp-btn">
+            <a href="https://wa.me/573123456789" target="_blank">
+                <img src="img/whatsapp.png" alt="WhatsApp">
+            </a>
+        </div>
+     </section>
+
+
+
+    <!-- Cabaña Details -->
+    <section class="cabin-details">
+        <div class="container">
+            <h2 class="script-cabins">Cabaña Seilan</h2>
+            
+            <div class="cabin-gallery">
+                <div class="main-image">
+                    <img src="/placeholder.svg?height=250&width=350" alt="Cabaña Seilan">
+                </div>
+                <button class="gallery-nav prev" id="prevBtn">‹</button>
+                <button class="gallery-nav next" id="nextBtn">›</button>
+                <div class="gallery-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+            
+            <div class="cabin-info">
+                <p><strong>Capacidad:</strong> Desde 6 hasta 13 huéspedes.</p>
+                <button class="details-btn">Más detalles</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiences Section -->
+    <section class="experiences">
+        <div class="container">
+            <div class="experience-icon">
+                <img src="/placeholder.svg?height=60&width=60" alt="Flor">
+            </div>
+            <h2>En Seilan te ofrecemos espacios<br>y momentos pensados para conectar<br>con la naturaleza.</h2>
+            <p>Disfruta de La Pérgola para eventos especiales, desayunos típicos, cenas románticas y celebraciones familiares. Nuestro espacio lleno de flores, un ambiente cálido para momentos únicos que quedarán para siempre inolvidables.</p>
+            
+            <div class="experience-gallery">
+                <div class="experience-images">
+                    <img src="/placeholder.svg?height=150&width=160" alt="La Pérgola">
+                    <img src="/placeholder.svg?height=150&width=160" alt="Cena Romántica">
+                </div>
+                <h3 class="script-font">La Pérgola</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="location">
+        <div class="container">
+            <button class="cta-btn">¡Reserva ahora!</button>
+            <h2>Ubicación</h2>
+            <div id="map" class="map-container"></div>
+            <p class="location-text">Somos tierra una ubicación estratégica ya que se encuentra ubicado a pocos minutos de las termas, parques, playas y tranquilidad. Así mismo, cerca del centro de la ciudad de Paipa, Boyacá y a tan solo 15 minutos del aeropuerto del departamento de Boyacá.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">
+                <img src="/placeholder.svg?height=80&width=120" alt="Seilan">
+            </div>
+            
+            <div class="contact-info">
+                <p>📞 +57 312 345 6789</p>
+                <p>📞 +57 300 876 4560</p>
+                <p>✉️ seilanalojamiento@gmail.com</p>
+            </div>
+            
+            <div class="address">
+                <p>KM 2 Vía Paterna,<br>
+                A 1.5 kilómetros de la autopista,<br>
+                Vereda Vargas,<br>
+                Paipa, Boyacá.</p>
+            </div>
+            
+            <div class="social-links">
+                <p>Síguenos:</p>
+                <div class="social-icons">
+                    <a href="#"><img src="/placeholder.svg?height=30&width=30" alt="Instagram"></a>
+                    <a href="#"><img src="/placeholder.svg?height=30&width=30" alt="Facebook"></a>
+                    <a href="#"><img src="/placeholder.svg?height=30&width=30" alt="TikTok"></a>
+                    <a href="#"><img src="/placeholder.svg?height=30&width=30" alt="YouTube"></a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>Hecho en<br>Productos AIDA<br>2024</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script-seilan.js"></script>
+</body>
+</html>

@@ -405,7 +405,7 @@ body {
 }
 
 /* Experiences */
-.experiences {
+.servicios {
     background: var(--primary-color);
     color: var(--text-light);
     padding: 60px 0;
@@ -486,13 +486,13 @@ body {
 
 
 /* Location */
-.location {
+.ubicacion {
     background: var(--text-light);
     padding: 60px 0;
     text-align: center;
 }
 
-.location h2 {
+.ubicacion h2 {
     font-family: 'Cream Candy';
     font-size: 48px;
     font-weight: 500;

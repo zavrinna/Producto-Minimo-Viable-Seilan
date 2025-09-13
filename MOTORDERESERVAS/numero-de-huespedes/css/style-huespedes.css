@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', 'Inter', sans-serif;
+  background-color: #e8eaed;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* 🔹 HEADER */
+.page-header {
+  width: 100%;
+  max-width: 19200px;
+  height: 97px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+  margin: 0 auto; /* para centrarlo en pantallas grandes */
+}
+
+.page-header .logo {
+  width: 82px;
+  height: 71px;
+  object-fit: contain;
+}
+
+/* 🔹 CONTENIDO PRINCIPAL */
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;  /* centra horizontal */
+  align-items: center;      /* centra vertical */
+  padding: 24px;
+}
+
+.guest-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 320px;       /* mismo ancho que la tarjeta */
+  max-width: 90%;
+  margin: 0 auto 10px auto;  /* centrado arriba de la card */
+}
+
+.guest-card {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  width: 320px;
+  max-width: 90%;           /* responsive en pantallas pequeñas */
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+  margin: 0 auto;           /* asegura que esté centrado */
+  margin-bottom: 250px;
+  margin-top: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.guest-header .back-arrow {
+  position: absolute;
+  left: 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.guest-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.guest-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 12px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.counter button {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.counter span {
+  width: 20px;
+  text-align: center;
+}
+
+.clear {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #666;
+  cursor: pointer;
+}
+
+.done-button {
+  width: 121px;
+  padding: 10px;
+  background-color: #c44727;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 20px auto 0;
+  display: block;
+}
+

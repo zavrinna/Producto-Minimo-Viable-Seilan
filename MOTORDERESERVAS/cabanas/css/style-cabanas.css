@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', 'Inter', sans-serif;
+  background-color: #e8eaed;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* 🔹 HEADER */
+.page-header {
+  width: 100%;
+  max-width: 19200px;
+  height: 97px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+  margin: 0 auto; /* para centrarlo en pantallas grandes */
+  margin-bottom: 30px;
+}
+
+.page-header .logo {
+  width: 82px;
+  height: 71px;
+  object-fit: contain;
+}
+
+.guest-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 320px;       /* mismo ancho que la tarjeta */
+  max-width: 90%;
+  margin: 0 auto 10px auto;  /* centrado arriba de la card */
+}
+
+.guest-header .back-arrow {
+  position: absolute;
+  left: 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.guest-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.cabin-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 16px;
+  max-width: 350px;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.cabin-title {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  color: #434550;
+  margin-bottom: 12px;
+}
+
+.cabin-img {
+  width: 197px;
+  height: 148px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 16px;
+}
+
+.cabin-icons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.material-symbols-outlined {
+  font-size: 20px;
+  color: #AB4523;
+}
+
+.cabin-desc {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 12px; /* 8pt ≈ 11px */
+  line-height: 1.4;
+  color: #434550;
+  margin-bottom: 20px;
+  text-align: justify;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.reserve-btn {
+  background: #AB4523;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.reserve-btn:hover {
+  background: #933a1f;
+}
+

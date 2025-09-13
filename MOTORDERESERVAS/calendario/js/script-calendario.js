@@ -65,7 +65,7 @@ function selectDate(date, span) {
     selectedCheckIn = date;
     selectedCheckOut = null;
     checkinInput.value = formatDate(date);
-    checkoutInput.value = "-/-/-";
+    checkoutInput.value = "-\-\-";
   } else if (selectedCheckIn && !selectedCheckOut && date > selectedCheckIn) {
     selectedCheckOut = date;
     checkoutInput.value = formatDate(date);
@@ -73,7 +73,7 @@ function selectDate(date, span) {
     selectedCheckIn = date;
     selectedCheckOut = null;
     checkinInput.value = formatDate(date);
-    checkoutInput.value = "-/-/-";
+    checkoutInput.value = "-\-/-";
   }
 
   highlightSelected();
@@ -123,8 +123,18 @@ nextBtn.addEventListener("click", () => {
   renderCalendar(currentDate);
 });
 
-document.getElementById("done-button").addEventListener("click", function() {
-  window.location.href = "C:\Users\adria\OneDrive\Desktop\PMV\MOTOR DE RESERVAS\numero de huespedes\index-huespedes.html"; // aquí va la ruta de la página
+document.getElementById("doneBtn").addEventListener("click", function() {
+  const ruta = "../numero-de-huespedes/index-huespedes.html"; // aquí va la ruta de la página
+  window.location.href = ruta;
 });
+
+
+  // ruta relativa recomendada (ajusta según tu estructura)
+
+  // si no renombraste la carpeta, usa encodeURI:
+  // const ruta = encodeURI('../numero de huespedes/index-huespedes.html');
+
+  // redirige en la misma pestaña
+  
 
 renderCalendar(currentDate);

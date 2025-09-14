@@ -138,3 +138,7 @@ document.getElementById("doneBtn").addEventListener("click", function() {
   
 
 renderCalendar(currentDate);
+
+document.querySelector('.back-arrow').addEventListener('click', () => {
+  window.history.back(); // retrocede una página en el historial
+});

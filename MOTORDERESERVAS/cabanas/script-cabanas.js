@@ -11,3 +11,7 @@ document.querySelectorAll(".reserve-btn").forEach((btn, index) => {
     }
   });
 });
+
+  document.querySelector('.back-arrow').addEventListener('click', () => {
+    window.history.back(); // retrocede una página en el historial
+  });

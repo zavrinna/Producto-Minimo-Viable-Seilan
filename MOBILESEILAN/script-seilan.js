@@ -56,67 +56,37 @@ flags.forEach(flag => {
 });
 
 // Smooth Scrolling for CTA buttons
-const ctaButtons = document.querySelectorAll('.cta-btn');
-ctaButtons.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        // You can implement booking functionality here
-        alert('¡Gracias por tu interés! Te contactaremos pronto.');
-    });
+// Redirigir todos los botones con clase .cta-btn
+document.querySelectorAll('.cta-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    window.location.href = '../MOTORDERESERVAS/calendario/index-calendario.html';
+  });
 });
+
 
 // Map Implementation
 function initMap() {
-    // Coordinates for Paipa, Boyacá
-    const paipaCoords = [5.7833, -73.1167];
-    
-    // Initialize the map
-    const map = L.map('map').setView(paipaCoords, 13);
-    
-    // Add OpenStreetMap tiles
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap contributors'
-    }).addTo(map);
-    
-    // Custom marker icon
-    const customIcon = L.divIcon({
-        html: '<div style="background: #B22222; width: 20px; height: 20px; border-radius: 50%; border: 3px solid white; box-shadow: 0 2px 5px rgba(0,0,0,0.3);"></div>',
-        iconSize: [20, 20],
-        iconAnchor: [10, 10]
-    });
-    
-    // Add marker for Seilan location
-    const marker = L.marker(paipaCoords, { icon: customIcon }).addTo(map);
-    
-    // Add popup to marker
-    marker.bindPopup(`
-        <div style="text-align: center; font-family: 'Open Sans', sans-serif;">
-            <strong>Seilan Alojamiento Rural</strong><br>
-            <small>KM 2 Vía Paterna, Vereda Vargas<br>Paipa, Boyacá</small>
-        </div>
-    `);
-    
-    // Add some nearby points of interest
-    const thermalSprings = L.marker([5.7900, -73.1200], { 
-        icon: L.divIcon({
-            html: '<div style="background: #4A90E2; width: 15px; height: 15px; border-radius: 50%; border: 2px solid white;"></div>',
-            iconSize: [15, 15],
-            iconAnchor: [7.5, 7.5]
-        })
-    }).addTo(map);
-    
-    thermalSprings.bindPopup('<strong>Termas de Paipa</strong><br><small>Aguas termales</small>');
-    
-    const airport = L.marker([5.7600, -73.1000], { 
-        icon: L.divIcon({
-            html: '<div style="background: #50C878; width: 15px; height: 15px; border-radius: 50%; border: 2px solid white;"></div>',
-            iconSize: [15, 15],
-            iconAnchor: [7.5, 7.5]
-        })
-    }).addTo(map);
-    
-    airport.bindPopup('<strong>Aeropuerto</strong><br><small>15 minutos</small>');
+  const paipaCoords = [5.792345, -73.127790];
+
+  const map = L.map("map", {
+    center: paipaCoords,
+    zoom: 13,
+    scrollWheelZoom: false,
+    dragging: false,
+    doubleClickZoom: false,
+    boxZoom: false,
+    keyboard: false
+  });
+
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  L.marker(paipaCoords).addTo(map)
+    .bindPopup("<strong>Seilan Alojamiento Rural</strong><br><small>Paipa, Boyacá</small>")
+    .openPopup();
 }
+document.addEventListener("DOMContentLoaded", initMap);
 
 // Initialize map when page loads
 document.addEventListener('DOMContentLoaded', () => {

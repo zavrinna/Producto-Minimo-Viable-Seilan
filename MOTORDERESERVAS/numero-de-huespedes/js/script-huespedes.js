@@ -28,3 +28,7 @@ document.querySelectorAll('.guest-row').forEach(row => {
 document.querySelector('.done-button').addEventListener('click', () => {
   window.location.href = '../cabanas/index-cabanas.html';
 });
+
+  document.querySelector('.back-arrow').addEventListener('click', () => {
+    window.history.back(); // retrocede una página en el historial
+  });

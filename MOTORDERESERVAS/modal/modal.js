@@ -10,3 +10,7 @@ document.querySelector('.btn-siguiente').addEventListener('click', () => {
   window.location.href = '../verificacion-de-reserva/index-verificacion.html';
 });
 
+  document.querySelector('.back-arrow').addEventListener('click', () => {
+    window.history.back(); // retrocede una página en el historial
+  });
+

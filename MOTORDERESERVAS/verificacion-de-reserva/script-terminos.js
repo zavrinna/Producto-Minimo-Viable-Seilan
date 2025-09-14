@@ -32,3 +32,7 @@ window.addEventListener("click", (e) => {
   }
 });
 
+document.querySelector('.back-arrow').addEventListener('click', () => {
+  window.history.back(); // retrocede una página en el historial
+  });
+
